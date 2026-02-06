@@ -1,0 +1,155 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Color Variables */
+:root {
+  /* Primary */
+
+  --purple50: hsl(260, 100%, 95%);
+  --purple300: hsl(264, 82%, 80%);
+  --purple500: hsl(263, 55%, 52%);
+
+  /* Neutral */
+
+  --white: hsl(0, 0%, 100%);
+  --grey100: hsl(214, 17%, 92%);
+  --grey200: hsl(0, 0%, 81%);
+  --grey400: hsl(224, 10%, 45%);
+  --grey500: hsl(217, 19%, 35%);
+  --dark-blue: hsl(219, 29%, 14%);
+  --black: hsl(0, 0%, 7%);
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  background-color: var(--grey100);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.testimonial-grid {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 25px 25px 50px -10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.card-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-user img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.user-info h2 {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.quote {
+  font-size: 0.85rem;
+  line-height: 1.35;
+  opacity: 0.7;
+}
+
+/* Card Colors */
+
+.purple {
+  background-color: var(--purple500);
+  color: var(--white);
+}
+
+.grey {
+  background-color: var(--grey500);
+  color: var(--white);
+}
+
+.white {
+  background-color: var(--white);
+  color: var(--grey500);
+}
+
+.dark-blue {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.white .status {
+  color: var(--grey400);
+}
+
+.card-daniel img {
+  border: 2px solid var(--purple300);
+}
+
+.card-patrick img {
+  border: 2px solid var(--purple500);
+}
+
+/* Responsive Design */
+
+@media (min-width: 1000px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "daniel daniel jonathan kira"
+      "jeanette patrick patrick kira";
+  }
+
+  .card-daniel {
+    grid-area: daniel;
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top 0 right 15%;
+    background-size: 102px;
+  }
+  .card-jonathan {
+    grid-area: jonathan;
+  }
+  .card-jeanette {
+    grid-area: jeanette;
+  }
+  .card-patrick {
+    grid-area: patrick;
+  }
+  .card-kira {
+    grid-area: kira;
+  }
+}
