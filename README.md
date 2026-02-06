@@ -68,3 +68,13 @@ I also focused on semantic HTML, using `<article>` for each testimonial and `<bl
   /* ... etc */
 }
 ```
+
+### Continued development
+
+I plan to continue practicing CSS Grid to build even more complex dashboards. I also want to dive deeper into CSS "Clamp" functions to create fluid typography without relying heavily on multiple media queries.
+
+## Author
+
+Frontend Mentor - @PatoCatejo
+
+GitHub - PatoCatejo
